@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Ball Bouncing Simulation</title>
+	<script src="ballsimdata.js"></script>
+	<!--<script src="simulation.js"></script>-->
+</head>
+<body>
+	<div id="left" style="display:inline-block;">
+		Initial X Position: <input id="posx"/><br/>
+		Initial Y Position: <input id="posy"/><br/>
+		<br/>
+		Initial X Velocity: <input id="velx"/><br/>
+		Initial Y Velocity: <input id="vely"/><br/>
+		<br/>
+		Ground Normal X Value: <input id="groundx"/><br/>
+		Ground Normal Y Value: <input id="groundy"/><br/>
+		<br/>
+		Time Step per Tick: <input id="timestep"/><br/>
+		<br/>
+		<button onclick="update()">Update Values</button><button onclick="reset()">Reset Values</button>	
+	</div>
+	<div id="right" style="display:inline-block;">
+		<canvas id="canvas" width=500 height=500></canvas><br/>
+		<button onclick="start()">Start Simulation</button><button onclick="stop()">Stop Simulation</button>
+	</div>
+	<script>
+		var context = document.getElementById('canvas').getContext("2d")
+		drawFrame();
+		reset();
+	</script>
+</body>
+<html>
